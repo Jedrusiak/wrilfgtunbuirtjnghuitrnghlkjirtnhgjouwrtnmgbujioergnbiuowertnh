@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="278.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.etg.dam.examen.view.PrincipalViewController">
+   <children>
+      <Button fx:id="btnAddProducto" layoutX="19.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#addProducto" text="Añadir Producto" />
+      <Button fx:id="btnAddServicio" layoutX="19.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#addServicio" prefHeight="26.0" prefWidth="103.0" text="Añadir Servicio" />
+      <TextField fx:id="txfProducto" layoutX="141.0" layoutY="74.0" promptText="id Producto" />
+      <TextField fx:id="txfServicio" layoutX="141.0" layoutY="109.0" promptText="id Servicio" />
+      <Label fx:id="lblIdSupermercado" layoutX="31.0" layoutY="14.0" text="Label" />
+      <Label fx:id="lblNombreSupermercado" layoutX="31.0" layoutY="32.0" text="Label" />
+      <Label fx:id="lblDireccionSupermercado" layoutX="31.0" layoutY="50.0" text="Label" />
+      <Button fx:id="btnImprimir" layoutX="19.0" layoutY="149.0" mnemonicParsing="false" onMouseClicked="#imprimirTicket" prefHeight="26.0" prefWidth="271.0" text="Imprimir ticket" />
+      <Button fx:id="btnPagarCash" layoutX="19.0" layoutY="186.0" mnemonicParsing="false" onMouseClicked="#pagarCash" prefHeight="26.0" prefWidth="271.0" text="Pagar con cash" />
+      <Button fx:id="btnPagarTarjeta" layoutX="19.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#pagarTarjeta" prefHeight="26.0" prefWidth="271.0" text="Pagar con tarjeta" />
+      <TableView fx:id="tblAdquiribles" layoutX="327.0" layoutY="32.0" prefHeight="215.0" prefWidth="381.0">
+        <columns>
+          <TableColumn fx:id="colDescripcion" prefWidth="121.5999755859375" text="Descripcion" />
+          <TableColumn fx:id="colPrecio" prefWidth="260.0000305175781" text="Precio" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
