@@ -16,5 +16,7 @@ public abstract class Adquirible {
     public double getPrecio() {
         return precio;
     }
-    
+    public String imprimir(){
+        return descripcion + " " + precio;
+    }
 }

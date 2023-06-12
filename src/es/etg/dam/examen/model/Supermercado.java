@@ -3,7 +3,7 @@ package es.etg.dam.examen.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Supermercado {
+public class Supermercado implements Imprimible{
     private String nombre;
     private String id;
     private String direccion;
@@ -59,5 +59,19 @@ public class Supermercado {
     public List<Descuento> getListaDescuentos() {
         return listaDescuentos;
     }
-    
+    public String obtenerImpresion(List<?> listaAdquiribles){
+
+
+        for(int i=0;i<listaAdquiribles.size();i++){
+            Adquirible a = (Adquirible) listaAdquiribles.get(i);
+            return a.imprimir();
+        }
+        return "";
+    }
+
+    @Override
+    public String aString() {
+        String imp = obtenerImpresion(listaProductos);
+        return imp;
+    }
 }
