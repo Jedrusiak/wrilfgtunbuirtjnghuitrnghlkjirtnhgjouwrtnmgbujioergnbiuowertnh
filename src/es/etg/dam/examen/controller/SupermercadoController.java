@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import es.etg.dam.examen.App;
 import es.etg.dam.examen.model.Descuento;
+import es.etg.dam.examen.model.Imprimible;
 import es.etg.dam.examen.model.Producto;
 import es.etg.dam.examen.model.Servicio;
 import es.etg.dam.examen.model.Supermercado;
@@ -86,7 +87,7 @@ public class SupermercadoController extends Application {
     public static Stage getCurrentStage() {
         return currentStage;
     }
-    public void generarTicket(Supermercado supermercado) throws ImpresoraException, FileNotFoundException, IOException{
+    public void generarTicket(Imprimible imprimible) throws ImpresoraException, FileNotFoundException, IOException{
         daoImpresora.generarTicket(supermercado);
     } 
 }

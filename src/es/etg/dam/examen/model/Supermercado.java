@@ -59,19 +59,21 @@ public class Supermercado implements Imprimible{
     public List<Descuento> getListaDescuentos() {
         return listaDescuentos;
     }
-    public String obtenerImpresion(List<?> listaAdquiribles){
-
-
-        for(int i=0;i<listaAdquiribles.size();i++){
-            Adquirible a = (Adquirible) listaAdquiribles.get(i);
-            return a.imprimir();
+    public String obtenerImpresion(List<? extends Adquirible> listaAdquiribles){
+        String contenido = "";
+        for (Adquirible adquirible : listaAdquiribles) {
+            contenido += adquirible.imprimir() + "\n";
         }
-        return "";
+        return contenido;
     }
 
     @Override
     public String aString() {
-        String imp = obtenerImpresion(listaProductos);
-        return imp;
+        String productos = obtenerImpresion(listaProductos);
+        String servicios = obtenerImpresion(listaServicios);
+        String descuentos = obtenerImpresion(listaDescuentos);
+
+        return productos + "\n" + servicios + "\n" + descuentos;
     }
+
 }
