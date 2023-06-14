@@ -3,7 +3,6 @@ package es.etg.dam.examen.controller;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
-
 import es.etg.dam.examen.App;
 import es.etg.dam.examen.model.Descuento;
 import es.etg.dam.examen.model.Imprimible;
@@ -35,7 +34,6 @@ public class SupermercadoController extends Application {
     FicheroInitDAO daoFichero;
     ImpresoraDAO daoImpresora;
     Supermercado supermercado;
-
     private static Stage currentStage;
 
     public SupermercadoController(){
@@ -79,11 +77,9 @@ public class SupermercadoController extends Application {
     public Supermercado inicializarSupermercado() throws FicheroInitException, IOException{
         return daoFichero.inicializarSupermercado();
     }
-
     public Supermercado getSupermercado() {
         return supermercado;
     }
-
     public static Stage getCurrentStage() {
         return currentStage;
     }
