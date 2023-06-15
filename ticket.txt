@@ -1,6 +1,7 @@
 Colonia DAM 10.0
-Perfume DAW 9.99
+Fregasuelos 0.62
+Detergente 2.22
 
+Corte de fiambre 1.0
 Envasado de fiambre 1.1
-Envío a Domicilio 1.0
 

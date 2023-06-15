@@ -7,4 +7,5 @@ import es.etg.dam.examen.model.Imprimible;
 
 public interface ImpresoraDAO {
     public void generarTicket(Imprimible imprimible) throws ImpresoraException, FileNotFoundException, IOException;
+    
 }

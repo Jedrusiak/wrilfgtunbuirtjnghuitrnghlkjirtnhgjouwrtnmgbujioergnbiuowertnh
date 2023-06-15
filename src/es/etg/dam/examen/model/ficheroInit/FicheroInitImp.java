@@ -25,7 +25,7 @@ public class FicheroInitImp implements FicheroInitDAO{
 
         return contenido;
     }
-    public List<String> procesar(String contenido){
+    private List<String> procesar(String contenido){
         final String DELIMITADOR = ";";
         List<String> lista = new ArrayList<>();
         StringTokenizer st = new StringTokenizer(contenido, DELIMITADOR);
